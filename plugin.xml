@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  id="cordova-plugin-device-descriptor"
+  version="1.0.0">
+
+  <name>Device Descriptor</name>
+  <description>Cordova plugin to get the device's descriptor based on model (brand, name)</description>
+  <license>MIT</license>
+  <keywords>cordova,device,descriptor,name,identifier</keywords>
+  <repo>https://github.com/pbakondy/cordova-plugin-device-descriptor</repo>
+  <issue>https://github.com/pbakondy/cordova-plugin-device-descriptor</issue>
+
+  <!-- both needed -->
+  <hook type="before_plugin_install" src="npm.js" />
+  <hook type="after_plugin_add" src="npm.js" />
+
+  <!-- android -->
+  <platform name="android">
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="Descriptor">
+        <param name="android-package" value="com.pbakondy.Descriptor"/>
+      </feature>
+    </config-file>
+
+    <source-file src="src/android/com/pbakondy/Descriptor.java" target-dir="src/com/pbakondy" />
+
+    <js-module src="www/descriptor-android.js" name="descriptor-android">
+      <clobbers target="descriptor" />
+    </js-module>
+    <js-module src="node_modules/android-device-list/devices.json" name="devices-json" />
+  </platform>
+
+  <!-- ios -->
+  <platform name="ios">
+    <config-file target="config.xml" parent="/*">
+      <feature name="Descriptor">
+        <param name="ios-package" value="Descriptor" />
+      </feature>
+    </config-file>
+
+    <header-file src="src/ios/Descriptor.h"/>
+    <source-file src="src/ios/Descriptor.m"/>
+
+    <js-module src="www/descriptor-ios.js" name="descriptor-ios">
+      <clobbers target="descriptor" />
+    </js-module>
+    <js-module src="node_modules/ios-device-list/apple_tv.json" name="apple_tv-json" />
+    <js-module src="node_modules/ios-device-list/apple_watch.json" name="apple_watch-json" />
+    <js-module src="node_modules/ios-device-list/ipad_mini.json" name="ipad_mini-json" />
+    <js-module src="node_modules/ios-device-list/ipad.json" name="ipad-json" />
+    <js-module src="node_modules/ios-device-list/iphone.json" name="iphone-json" />
+    <js-module src="node_modules/ios-device-list/ipod_touch.json" name="ipod_touch-json" />
+  </platform>
+
+</plugin>
