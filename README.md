@@ -9,9 +9,6 @@ Underlying components:
 - [android-device-list](https://www.npmjs.com/package/android-device-list)
 - [ios-device-list](https://www.npmjs.com/package/ios-device-list)
 
-Dependency:
-- [cordova-plugin-device](https://www.npmjs.com/package/cordova-plugin-device)
-
 ## Installation
 
 ```
