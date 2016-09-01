@@ -49,6 +49,7 @@ module.exports = {
           all.forEach(function (d) {
             if (d.model === model) {
               descriptor = d;
+              descriptor.brand = 'Apple';
             }
           });
 

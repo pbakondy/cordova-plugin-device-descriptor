@@ -55,6 +55,7 @@ The plugin returns a JSON object.
 
 ```js
 {
+  brand: "Apple",
   name: 'iPhone 5c',
   model: 'iPhone5,3',
   ANumber: [ 'A1456', 'A1532' ],
