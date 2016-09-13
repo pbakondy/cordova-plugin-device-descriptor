@@ -2,7 +2,7 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
   xmlns:android="http://schemas.android.com/apk/res/android"
   id="cordova-plugin-device-descriptor"
-  version="1.0.2">
+  version="1.0.3">
 
   <name>Device Descriptor</name>
   <description>Cordova plugin to get the device's descriptor based on model (brand, name)</description>
@@ -45,12 +45,7 @@
     <js-module src="www/descriptor-ios.js" name="descriptor-ios">
       <clobbers target="descriptor" />
     </js-module>
-    <js-module src="node_modules/ios-device-list/apple_tv.json" name="apple_tv-json" />
-    <js-module src="node_modules/ios-device-list/apple_watch.json" name="apple_watch-json" />
-    <js-module src="node_modules/ios-device-list/ipad_mini.json" name="ipad_mini-json" />
-    <js-module src="node_modules/ios-device-list/ipad.json" name="ipad-json" />
-    <js-module src="node_modules/ios-device-list/iphone.json" name="iphone-json" />
-    <js-module src="node_modules/ios-device-list/ipod_touch.json" name="ipod_touch-json" />
+    <js-module src="node_modules/ios-device-list/devices.json" name="ios-devices-json" />
   </platform>
 
 </plugin>

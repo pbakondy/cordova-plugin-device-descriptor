@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-device-descriptor",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Cordova plugin to get the device's descriptor based on model (brand, name)",
   "cordova": {
     "id": "cordova-plugin-device-descriptor",
@@ -31,7 +31,7 @@
   },
   "homepage": "https://github.com/pbakondy/cordova-plugin-device-descriptor#readme",
   "dependencies": {
-    "android-device-list": "^1.1.7",
-    "ios-device-list": "^1.1.7"
+    "android-device-list": "^1.1.14",
+    "ios-device-list": "^1.1.10"
   }
 }
